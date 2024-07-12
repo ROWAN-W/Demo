@@ -1,0 +1,12 @@
+# name and location of this file is by default, can be changed and set in application.properties
+#will not get run in test scope, so need to run the image manually and inject these variables in application.properties
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=runnerz'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=rowan'
+    ports:
+#      port that postgres run on container :(map) to port number on my machine
+      - '5432:5432'
